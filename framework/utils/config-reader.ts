@@ -11,6 +11,7 @@ export class ConfigReader {
     }
 
     public getProperty(name: string) {
+        if(!name) return this.configData;
         const split = name.split('.');
         let index = 0;
         let result: any;
